@@ -7,7 +7,7 @@
     "build:css": "bin/build-css",
     "build": "bin/build",
     "lint": "standard",
-    "unit-test": "lab",
+    "unit-test": "lab -c -r console -o stdout -r lcov -o lcov.info",
     "test": "npm run lint && npm run unit-test",
     "postinstall": "npm run build"
   },
@@ -25,6 +25,7 @@
   "devDependencies": {
     "blipp": "^3.0.0",
     "code": "5.2.0",
+    "codeclimate-test-reporter": "^0.5.0",
     "good": "8.1.1",
     "good-console": "7.1.0",
     "good-file": "6.0.1",
