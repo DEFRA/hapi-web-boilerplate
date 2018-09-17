@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/DEFRA/hapi-web-boilerplate.svg?branch=master)](https://travis-ci.org/DEFRA/hapi-web-boilerplate)
+
 # (Enter service name)
 (Description of the service)
 
@@ -21,7 +23,8 @@ Once you clone this repository you'll need to make a few changes before you're r
 - [ ] Check over the content of the 404 and 500 error pages and tailor to suit
 - [ ] Update the `package.json` with the name, description and any git urls and authors etc.  
 - [ ] Update the [views context data](/server/plugins/views.js#L39) to include the correct service and default page title
-- [ ] Finally, remove the .git folder in the root directory. This will cut the cord to this boilerplate repo.
+- [ ] Remove the .git folder in the root directory. This will cut the cord to this boilerplate repo.
+- [ ] Update the build status badges to your new project
 
 # Running the application
 
