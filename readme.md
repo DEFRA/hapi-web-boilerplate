@@ -11,7 +11,7 @@
 | NODE_ENV | Node environment |    no    |         | development,test,production |       |
 | PORT     | Port number      |    no    | 3000    |                             |       |
 
-# Prerequires
+# Prerequisites
 
 Node v8+
 
