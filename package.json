@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "boom": "7.3.0",
-    "govuk-frontend": "2.8.0",
+    "govuk-frontend": "2.9.0",
     "hapi": "18.1.0",
     "inert": "5.1.2",
     "joi": "14.3.1",
