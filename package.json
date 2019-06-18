@@ -23,7 +23,7 @@
     "vision": "5.4.4"
   },
   "devDependencies": {
-    "blipp": "^4.0.0",
+    "blipp": "4.0.0",
     "code": "5.2.4",
     "codeclimate-test-reporter": "0.5.1",
     "good": "8.1.2",
