@@ -5,7 +5,7 @@ const pkg = require('../../package.json')
 const analyticsAccount = config.analyticsAccount
 
 module.exports = {
-  plugin: require('vision'),
+  plugin: require('@hapi/vision'),
   options: {
     engines: {
       njk: {

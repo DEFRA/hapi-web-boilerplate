@@ -1,5 +1,5 @@
 module.exports = {
-  plugin: require('good'),
+  plugin: require('@hapi/good'),
   options: {
     ops: {
       interval: 1000
@@ -7,7 +7,7 @@ module.exports = {
     reporters: {
       console: [
         {
-          module: 'good-squeeze',
+          module: '@hapi/good-squeeze',
           name: 'Squeeze',
           args: [
             {
@@ -19,7 +19,7 @@ module.exports = {
           ]
         },
         {
-          module: 'good-console'
+          module: '@hapi/good-console'
         },
         'stdout'
       ]
