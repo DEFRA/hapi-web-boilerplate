@@ -1,5 +1,5 @@
 {
-  "name": "glupe-base",
+  "name": "hapi-web-boilerplate",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -14,24 +14,23 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "boom": "7.3.0",
-    "govuk-frontend": "2.8.0",
-    "hapi": "18.1.0",
-    "inert": "5.1.2",
-    "joi": "14.3.1",
-    "nunjucks": "3.2.0",
-    "vision": "5.4.4"
+    "@hapi/boom": "7.4.2",
+    "@hapi/hapi": "18.3.1",
+    "@hapi/inert": "5.2.1",
+    "@hapi/joi": "15.1.0",
+    "@hapi/vision": "5.5.2",
+    "blipp": "4.0.0",
+    "govuk-frontend": "3.0.0",
+    "nunjucks": "3.2.0"
   },
   "devDependencies": {
-    "blipp": "^3.1.2",
-    "code": "5.2.4",
+    "@hapi/code": "6.0.0",
+    "@hapi/good": "8.2.0",
+    "@hapi/good-console": "8.1.0",
+    "@hapi/good-squeeze": "5.2.0",
+    "@hapi/lab": "19.1.0",
     "codeclimate-test-reporter": "0.5.1",
-    "good": "8.1.2",
-    "good-console": "8.0.0",
-    "good-file": "6.0.1",
-    "good-squeeze": "5.1.0",
-    "lab": "18.0.2",
-    "node-sass": "4.11.0",
-    "standard": "12.0.1"
+    "node-sass": "4.12.0",
+    "standard": "13.1.0"
   }
 }

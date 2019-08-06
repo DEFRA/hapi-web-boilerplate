@@ -5,10 +5,10 @@ const pkg = require('../../package.json')
 const analyticsAccount = config.analyticsAccount
 
 module.exports = {
-  plugin: require('vision'),
+  plugin: require('@hapi/vision'),
   options: {
     engines: {
-      njk: {
+      html: {
         compile: (src, options) => {
           const template = nunjucks.compile(src, options.environment)
 
@@ -19,8 +19,8 @@ module.exports = {
         prepare: (options, next) => {
           options.compileOptions.environment = nunjucks.configure([
             path.join(options.relativeTo || process.cwd(), options.path),
-            'node_modules/govuk-frontend/',
-            'node_modules/govuk-frontend/components/'
+            'node_modules/govuk-frontend/govuk/',
+            'node_modules/govuk-frontend/govuk/components/'
           ], {
             autoescape: true,
             watch: false
