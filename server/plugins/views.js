@@ -8,7 +8,7 @@ module.exports = {
   plugin: require('@hapi/vision'),
   options: {
     engines: {
-      njk: {
+      html: {
         compile: (src, options) => {
           const template = nunjucks.compile(src, options.environment)
 
