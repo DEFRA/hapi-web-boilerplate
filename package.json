@@ -28,7 +28,7 @@
     "@hapi/good": "8.2.0",
     "@hapi/good-console": "8.1.0",
     "@hapi/good-squeeze": "5.2.0",
-    "@hapi/lab": "19.1.0",
+    "@hapi/lab": "20.0.0",
     "codeclimate-test-reporter": "0.5.1",
     "node-sass": "4.12.0",
     "standard": "13.1.0"
