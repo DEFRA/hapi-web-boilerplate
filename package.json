@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "build:css": "bin/build-css",
     "build": "bin/build",
     "lint": "standard",
