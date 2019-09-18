@@ -32,6 +32,6 @@
     "@hapi/lab": "20.2.2",
     "codeclimate-test-reporter": "0.5.1",
     "node-sass": "4.12.0",
-    "standard": "14.3.0"
+    "standard": "14.3.1"
   }
 }
