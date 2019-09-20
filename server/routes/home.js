@@ -3,13 +3,11 @@ const joi = require('@hapi/joi')
 module.exports = [{
   method: 'GET',
   path: '/',
-  options: {
-    handler: (request, h) => {
-      return h.view('home', {
-        title: 'Hello',
-        message: 'World'
-      })
-    }
+  handler: (request, h) => {
+    return h.view('home', {
+      title: 'Hello',
+      message: 'World'
+    })
   }
 }, {
   method: 'POST',
