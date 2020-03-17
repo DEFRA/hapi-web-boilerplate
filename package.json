@@ -22,7 +22,7 @@
     "@hapi/vision": "5.5.4",
     "blipp": "4.0.1",
     "govuk-frontend": "3.2.0",
-    "nunjucks": "3.2.0"
+    "nunjucks": "3.2.1"
   },
   "devDependencies": {
     "@hapi/code": "6.0.0",
