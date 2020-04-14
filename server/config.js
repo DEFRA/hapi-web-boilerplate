@@ -1,5 +1,5 @@
 const joi = require('@hapi/joi')
-const envs = ['development', 'test', 'production']
+const envs = ['dev', 'test', 'prod']
 
 // Define config schema
 const schema = joi.object().keys({
