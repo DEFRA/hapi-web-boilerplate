@@ -21,4 +21,7 @@ if (error) {
   throw new Error(`The server config is invalid. ${error.message}`)
 }
 
+// Add some helper props
+value.isDev = value.env === 'dev'
+
 module.exports = value
