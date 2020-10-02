@@ -1,5 +1,5 @@
 const joi = require('@hapi/joi')
-const envs = ['development', 'test', 'production']
+const envs = ['dev', 'test', 'prod']
 
 // Define config schema
 const schema = joi.object().keys({
@@ -20,5 +20,8 @@ const { error, value } = schema.validate(config)
 if (error) {
   throw new Error(`The server config is invalid. ${error.message}`)
 }
+
+// Add some helper props
+value.isDev = value.env === 'dev'
 
 module.exports = value
