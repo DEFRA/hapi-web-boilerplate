@@ -16,20 +16,20 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/boom": "9.1.4",
-    "@hapi/hapi": "20.2.1",
+    "@hapi/hapi": "20.2.2",
     "@hapi/inert": "6.0.5",
-    "@hapi/joi": "17.1.1",
     "@hapi/vision": "6.1.0",
     "blipp": "4.0.2",
-    "govuk-frontend": "4.0.0",
-    "hapi-pino": "9.1.1",
+    "govuk-frontend": "4.0.1",
+    "hapi-pino": "9.3.0",
+    "joi": "17.6.0",
     "nunjucks": "3.2.3"
   },
   "devDependencies": {
-    "@hapi/code": "8.0.6",
-    "@hapi/lab": "24.5.1",
+    "@hapi/code": "8.0.7",
+    "@hapi/lab": "24.6.0",
     "codeclimate-test-reporter": "0.5.1",
     "node-sass": "7.0.1",
-    "standard": "16.0.4"
+    "standard": "17.0.0"
   }
 }
