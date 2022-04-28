@@ -97,11 +97,7 @@ Plugins live in the `server/plugins` directory.
 
 ## Logging
 
-The [good](https://github.com/hapijs/good) and [good-console](https://github.com/hapijs/good-console) plugins are included and configured in `server/plugins/logging`
-
-The logging plugin is only registered in when `NODE_ENV=development`.
-
-Error logging for production should use errbit.
+The [hapi-pino](https://github.com/pinojs/hapi-pino) plugin is included and configured in `server/plugins/logging`
 
 ## Views
 
