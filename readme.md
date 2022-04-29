@@ -97,7 +97,7 @@ Plugins live in the `server/plugins` directory.
 
 ## Logging
 
-The [hapi-pino](https://github.com/pinojs/hapi-pino) plugin is included and configured in `server/plugins/logging`
+The [@hapi/log](https://github.com/hapijs/log) plugin is included and configured in `server/plugins/logging`
 
 ## Views
 

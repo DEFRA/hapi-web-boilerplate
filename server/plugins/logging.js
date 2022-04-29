@@ -1,9 +1,8 @@
 const config = require('../config')
 
 module.exports = {
-  plugin: require('hapi-pino'),
+  plugin: require('@hapi/log'),
   options: {
-    logPayload: true,
-    level: config.isDev ? 'debug' : 'warn'
+    level: config.isDev ? 'debug' : 'warning'
   }
 }
