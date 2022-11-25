@@ -1,9 +1,11 @@
 const config = require('../config')
+const events = ['log', 'request', 'start', 'stop']
 
 module.exports = {
-  plugin: require('hapi-pino'),
+  plugin: require('@hapi/log'),
   options: {
-    logPayload: true,
-    level: config.isDev ? 'debug' : 'warn'
+    events,
+    ignoreChannels: ['internal'],
+    level: config.isDev ? 'debug' : 'info'
   }
 }

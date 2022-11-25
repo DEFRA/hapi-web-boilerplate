@@ -1,4 +1,4 @@
-const joi = require('@hapi/joi')
+const joi = require('joi')
 const envs = ['dev', 'test', 'prod']
 
 // Define config schema

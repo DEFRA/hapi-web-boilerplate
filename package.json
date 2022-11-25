@@ -15,21 +15,21 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hapi/boom": "9.1.4",
-    "@hapi/hapi": "20.2.1",
-    "@hapi/inert": "6.0.5",
-    "@hapi/joi": "17.1.1",
-    "@hapi/vision": "6.1.0",
-    "blipp": "4.0.2",
-    "govuk-frontend": "4.0.0",
-    "hapi-pino": "9.1.1",
-    "nunjucks": "3.2.3"
+    "@hapi/boom": "^10.0.0",
+    "@hapi/hapi": "^21.0.0",
+    "@hapi/inert": "^7.0.0",
+    "@hapi/log": "^2.0.0",
+    "@hapi/vision": "^7.0.0",
+    "blipp": "^4.0.2",
+    "govuk-frontend": "^4.4.0",
+    "joi": "^17.7.0",
+    "nunjucks": "^3.2.3"
   },
   "devDependencies": {
-    "@hapi/code": "8.0.6",
-    "@hapi/lab": "24.5.1",
-    "codeclimate-test-reporter": "0.5.1",
-    "node-sass": "7.0.1",
-    "standard": "16.0.4"
+    "@hapi/code": "^9.0.1",
+    "@hapi/lab": "^25.0.1",
+    "codeclimate-test-reporter": "^0.5.1",
+    "node-sass": "^8.0.0",
+    "standard": "^17.0.0"
   }
 }
