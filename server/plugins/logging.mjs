@@ -1,8 +1,10 @@
-const config = require('../config')
+import log from '@hapi/log'
+import config from '../config.mjs'
+
 const events = ['log', 'request', 'start', 'stop']
 
-module.exports = {
-  plugin: require('@hapi/log'),
+export default {
+  plugin: log,
   options: {
     events,
     ignoreChannels: ['internal'],
