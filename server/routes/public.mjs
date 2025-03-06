@@ -10,7 +10,7 @@ export default [
     method: 'GET',
     path: '/assets/all.js',
     handler: {
-      file: 'node_modules/govuk-frontend/govuk/all.js'
+      file: 'node_modules/govuk-frontend/dist/govuk/all.bundle.js'
     }
   },
   {
@@ -21,7 +21,7 @@ export default [
         path: [
           'server/public/static',
           'server/public/build',
-          'node_modules/govuk-frontend/govuk/assets'
+          'node_modules/govuk-frontend/dist/govuk/assets'
         ]
       }
     }
