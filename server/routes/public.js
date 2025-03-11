@@ -17,14 +17,14 @@ export default [
     method: 'GET',
     path: '/stylesheets/application.e340021.min.css',
     handler: {
-      file: 'node_modules/@defra/forms-engine/.public/stylesheets/application.e340021.min.css'
+      file: 'node_modules/@defra/forms-engine-plugin/.public/stylesheets/application.e340021.min.css'
     }
   },
   {
     method: 'GET',
     path: '/javascripts/application.0fd8c18.min.js',
     handler: {
-      file: 'node_modules/@defra/forms-engine/.public/javascripts/application.0fd8c18.min.js'
+      file: 'node_modules/@defra/forms-engine-plugin/.public/javascripts/application.0fd8c18.min.js'
     }
   },
   {

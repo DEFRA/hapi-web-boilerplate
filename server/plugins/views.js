@@ -6,8 +6,9 @@ import config from '../config.js'
 import { createRequire } from 'module'
 import config from '../config.mjs'
 // import { createRequire } from 'module'
-import { context } from '@defra/forms-engine/.server/server/plugins/nunjucks/context.js'
-import * as filters from '@defra/forms-engine/.server/server/plugins/nunjucks/filters/index.js'
+import { context } from '@defra/forms-engine-plugin/.server/server/plugins/nunjucks/context.js'
+import * as filters from '@defra/forms-engine-plugin/.server/server/plugins/nunjucks/filters/index.js'
+import { checkErrorTemplates, checkComponentTemplates, evaluate } from '@defra/forms-engine-plugin/.server/server/plugins/nunjucks/environment.js'
 
 // const require = createRequire(import.meta.url)
 // const pkg = require('../../package.json')
@@ -16,8 +17,8 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
 const env = nunjucks.configure(
   [
-    'node_modules/@defra/forms-engine/src/server/plugins/engine/views',
-    'node_modules/@defra/forms-engine/src/server/views',
+    'node_modules/@defra/forms-engine-plugin/src/server/plugins/engine/views',
+    'node_modules/@defra/forms-engine-plugin/src/server/views',
     path.join(__dirname, '../views'),
     'node_modules/govuk-frontend/dist'
   ],
@@ -46,6 +47,10 @@ for (const [name, nunjucksFilter] of Object.entries(filters)) {
   env.addFilter(name, nunjucksFilter)
 }
 
+env.addGlobal('evaluate', evaluate)
+env.addGlobal('checkErrorTemplates', checkErrorTemplates)
+env.addGlobal('checkComponentTemplates', checkComponentTemplates)
+
 export default {
   plugin: vision,
   options: {
@@ -67,8 +72,8 @@ export default {
     },
     path: [
       '../views',
-      '../../node_modules/@defra/forms-engine/src/server/plugins/engine/views',
-      '../../node_modules/@defra/forms-engine/src/server/views'
+      '../../node_modules/@defra/forms-engine-plugin/src/server/plugins/engine/views',
+      '../../node_modules/@defra/forms-engine-plugin/src/server/views'
     ],
     relativeTo: __dirname,
     isCached: !config.isDev,

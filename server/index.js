@@ -10,7 +10,7 @@ import session from './plugins/session.mjs'
 import errorPages from './plugins/error-pages.mjs'
 import logging from './plugins/logging.mjs'
 import schmervice from '@hapipal/schmervice'
-import { CacheService } from '@defra/forms-engine'
+import { CacheService } from '@defra/forms-engine-plugin'
 import { Engine as CatboxMemory } from '@hapi/catbox-memory'
 
 async function createServer () {

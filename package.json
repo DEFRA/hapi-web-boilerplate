@@ -19,7 +19,7 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@defra/forms-engine": "file:../forms-engine",
+    "@defra/forms-engine-plugin": "^0.0.3",
     "@hapi/boom": "^10.0.1",
     "@hapi/catbox-memory": "^6.0.2",
     "@hapi/crumb": "^9.0.1",
