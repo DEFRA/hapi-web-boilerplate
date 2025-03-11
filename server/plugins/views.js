@@ -4,11 +4,47 @@ import nunjucks from 'nunjucks'
 import vision from '@hapi/vision'
 import config from '../config.js'
 import { createRequire } from 'module'
+import config from '../config.mjs'
+// import { createRequire } from 'module'
+import { context } from '@defra/forms-engine/.server/server/plugins/nunjucks/context.js'
+import * as filters from '@defra/forms-engine/.server/server/plugins/nunjucks/filters/index.js'
 
-const require = createRequire(import.meta.url)
-const pkg = require('../../package.json')
-const analyticsAccount = config.analyticsAccount
+// const require = createRequire(import.meta.url)
+// const pkg = require('../../package.json')
+// const analyticsAccount = config.analyticsAccount
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
+
+const env = nunjucks.configure(
+  [
+    'node_modules/@defra/forms-engine/src/server/plugins/engine/views',
+    'node_modules/@defra/forms-engine/src/server/views',
+    path.join(__dirname, '../views'),
+    'node_modules/govuk-frontend/dist'
+  ],
+  {
+    autoescape: true,
+    watch: false
+  }
+)
+
+// export const paths = [
+//   join(config.get('appDir'), 'plugins/engine/views'),
+//   join(config.get('appDir'), 'views')
+// ]
+
+// export const environment = nunjucks.configure(
+//   [...paths, join(govukFrontendPath, 'dist')],
+//   {
+//     trimBlocks: true,
+//     lstripBlocks: true,
+//     watch: config.get('isDevelopment'),
+//     noCache: config.get('isDevelopment')
+//   }
+// )
+
+for (const [name, nunjucksFilter] of Object.entries(filters)) {
+  env.addFilter(name, nunjucksFilter)
+}
 
 export default {
   plugin: vision,
@@ -23,30 +59,28 @@ export default {
           }
         },
         prepare: (options, next) => {
-          options.compileOptions.environment = nunjucks.configure(
-            [
-              path.join(options.relativeTo || process.cwd(), options.path),
-              'node_modules/govuk-frontend/dist'
-            ],
-            {
-              autoescape: true,
-              watch: false
-            }
-          )
+          options.compileOptions.environment = env
 
           return next()
         }
       }
     },
-    path: '../views',
+    path: [
+      '../views',
+      '../../node_modules/@defra/forms-engine/src/server/plugins/engine/views',
+      '../../node_modules/@defra/forms-engine/src/server/views'
+    ],
     relativeTo: __dirname,
     isCached: !config.isDev,
-    context: {
-      appVersion: pkg.version,
-      assetPath: '/assets',
-      serviceName: 'Service name',
-      pageTitle: 'Service name - GOV.UK',
-      analyticsAccount
+    context: () => {
+      return context()
     }
+    // context: {
+    //   appVersion: pkg.version,
+    //   assetPath: '/assets',
+    //   serviceName: 'Service name',
+    //   pageTitle: 'Service name - GOV.UK',
+    //   analyticsAccount
+    // }
   }
 }
