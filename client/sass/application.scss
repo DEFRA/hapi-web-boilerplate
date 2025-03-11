@@ -1,5 +1,1 @@
-@forward "pkg:govuk-frontend" with (
-  $govuk-global-styles: true,
-  $govuk-assets-path: "/assets/",
-  $govuk-new-organisation-colours: true
-);
+@import "../../node_modules/@defra/forms-engine-plugin/src/client/stylesheets/application.scss";

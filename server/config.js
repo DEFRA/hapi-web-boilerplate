@@ -1,6 +1,6 @@
 import joi from 'joi'
 
-const envs = ['dev', 'test', 'prod']
+const envs = ['production', 'development', 'test']
 
 // Define config schema
 const schema = joi.object().keys({

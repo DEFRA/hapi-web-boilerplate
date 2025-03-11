@@ -18,6 +18,7 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 const env = nunjucks.configure(
   [
     'node_modules/@defra/forms-engine-plugin/src/server/plugins/engine/views',
+    'node_modules/@defra/forms-engine-plugin/src/server/plugins',
     'node_modules/@defra/forms-engine-plugin/src/server/views',
     path.join(__dirname, '../views'),
     'node_modules/govuk-frontend/dist'
@@ -73,6 +74,7 @@ export default {
     path: [
       '../views',
       '../../node_modules/@defra/forms-engine-plugin/src/server/plugins/engine/views',
+      '../../node_modules/@defra/forms-engine-plugin/src/server/plugins',
       '../../node_modules/@defra/forms-engine-plugin/src/server/views'
     ],
     relativeTo: __dirname,
