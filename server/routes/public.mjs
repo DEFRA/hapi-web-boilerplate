@@ -8,9 +8,9 @@ export default [
   },
   {
     method: 'GET',
-    path: '/assets/all.js',
+    path: '/assets/govuk-frontend.min.js',
     handler: {
-      file: 'node_modules/govuk-frontend/dist/govuk/all.bundle.js'
+      file: 'node_modules/govuk-frontend/dist/govuk/govuk-frontend.min.js'
     }
   },
   {
