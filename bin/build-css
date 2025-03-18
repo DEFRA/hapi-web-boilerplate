@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sass --pkg-importer=node client/sass/application.scss server/public/build/stylesheets/application.css
+sass --pkg-importer=node --quiet client/sass/application.scss server/public/build/stylesheets/application.css
