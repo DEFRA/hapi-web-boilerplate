@@ -1,5 +1,5 @@
 import log from '@hapi/log'
-import config from '../config.mjs'
+import config from '../config.js'
 
 const events = ['log', 'request', 'start', 'stop']
 

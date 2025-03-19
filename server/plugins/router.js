@@ -1,6 +1,6 @@
-import home from '../routes/home.mjs'
-import about from '../routes/about.mjs'
-import pub from '../routes/public.mjs'
+import home from '../routes/home.js'
+import about from '../routes/about.js'
+import pub from '../routes/public.js'
 
 const routes = [].concat(
   home,

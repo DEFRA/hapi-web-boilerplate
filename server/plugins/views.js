@@ -2,7 +2,7 @@ import path from 'path'
 import * as url from 'url'
 import nunjucks from 'nunjucks'
 import vision from '@hapi/vision'
-import config from '../config.mjs'
+import config from '../config.js'
 import { createRequire } from 'module'
 
 const require = createRequire(import.meta.url)

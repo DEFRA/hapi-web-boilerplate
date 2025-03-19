@@ -1,6 +1,6 @@
 import { describe, expect, test, beforeAll } from '@jest/globals'
-import createServer from '../../server/index.mjs'
-import auth from '../utils/test-auth.mjs'
+import createServer from '../../server/index.js'
+import auth from '../utils/test-auth.js'
 
 describe('Main routes', () => {
   let server

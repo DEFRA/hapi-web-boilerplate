@@ -1,11 +1,11 @@
 import hapi from '@hapi/hapi'
 import inert from '@hapi/inert'
 import blipp from 'blipp'
-import config from './config.mjs'
-import views from './plugins/views.mjs'
-import router from './plugins/router.mjs'
-import errorPages from './plugins/error-pages.mjs'
-import logging from './plugins/logging.mjs'
+import config from './config.js'
+import views from './plugins/views.js'
+import router from './plugins/router.js'
+import errorPages from './plugins/error-pages.js'
+import logging from './plugins/logging.js'
 
 async function createServer () {
   // Create the hapi server
