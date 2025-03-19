@@ -176,6 +176,6 @@ See the `/__test__` folder for more information.
 
 ## Linting
 
-[standard.js](http://standardjs.com/) is used to lint both the server-side and client-side javascript code.
+[neostandard](https://github.com/neostandard/neostandard) is used to lint both the server-side and client-side javascript code.
 
 It's defined as a build task and can be run using `npm run lint`.
