@@ -11,9 +11,6 @@
     "lint": "standard",
     "pretest": "npm run lint",
     "test": "NODE_ENV=test node --experimental-vm-modules ./node_modules/.bin/jest test --collect-coverage",
-    "test:ci": "NODE_ENV=test node --experimental-vm-modules ./node_modules/.bin/jest test --collect-coverage",
-    "testcafe": "testcafe chrome test/e2e-tests/e2e-tests.js",
-    "testcafe:ci": "testcafe chrome:headless test/e2e-tests/e2e-tests.js",
     "postinstall": "npm run build"
   },
   "author": "",
