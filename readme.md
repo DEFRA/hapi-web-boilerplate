@@ -49,7 +49,7 @@ Click here for a similar [api boilerplate hapi project](https://github.com/DEFRA
 Based on:
 
 - [hapijs](https://github.com/hapijs/hapi) - The framework & core plugins like `joi`, `vision` etc.
-- [standardjs](http://standardjs.com/) - Linting
+- [neostandard](https://github.com/neostandard/neostandard) - Linting
 - [govuk-frontend](https://github.com/alphagov/govuk-frontend) - Styles & macros
 - [nunjucks](http://mozilla.github.io/nunjucks/) - Default template engine
 - [npm-scripts](https://docs.npmjs.com/misc/scripts) - Build tool

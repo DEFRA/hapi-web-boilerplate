@@ -8,7 +8,7 @@
     "start": "node index.js",
     "build:css": "bin/build-css",
     "build": "bin/build",
-    "lint": "standard",
+    "lint": "eslint",
     "pretest": "npm run lint",
     "test": "NODE_ENV=test node --experimental-vm-modules ./node_modules/.bin/jest test --collect-coverage",
     "postinstall": "npm run build"
@@ -30,7 +30,9 @@
     "nunjucks": "^3.2.4"
   },
   "devDependencies": {
+    "eslint": "^9.22.0",
     "jest": "^29.7.0",
+    "neostandard": "^0.12.1",
     "sass": "^1.86.0",
     "standard": "^17.1.2"
   }
