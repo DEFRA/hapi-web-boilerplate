@@ -1,5 +1,3 @@
 #!/bin/bash
 
-node-sass --output-style=expanded \
-  --output=server/public/build/stylesheets \
-  client/sass
+sass --pkg-importer=node --quiet client/sass/application.scss server/public/build/stylesheets/application.css

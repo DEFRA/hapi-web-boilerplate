@@ -1,3 +1,5 @@
-$govuk-global-styles: true;
-
-@import "node_modules/govuk-frontend/govuk/all";
+@forward "pkg:govuk-frontend" with (
+  $govuk-global-styles: true,
+  $govuk-assets-path: "/assets/",
+  $govuk-new-organisation-colours: true
+);

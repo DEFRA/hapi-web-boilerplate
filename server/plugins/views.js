@@ -1,11 +1,17 @@
-const path = require('path')
-const nunjucks = require('nunjucks')
-const config = require('../config')
+import path from 'path'
+import * as url from 'url'
+import nunjucks from 'nunjucks'
+import vision from '@hapi/vision'
+import config from '../config.js'
+import { createRequire } from 'module'
+
+const require = createRequire(import.meta.url)
 const pkg = require('../../package.json')
 const analyticsAccount = config.analyticsAccount
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
-module.exports = {
-  plugin: require('@hapi/vision'),
+export default {
+  plugin: vision,
   options: {
     engines: {
       html: {
@@ -17,13 +23,16 @@ module.exports = {
           }
         },
         prepare: (options, next) => {
-          options.compileOptions.environment = nunjucks.configure([
-            path.join(options.relativeTo || process.cwd(), options.path),
-            'node_modules/govuk-frontend/'
-          ], {
-            autoescape: true,
-            watch: false
-          })
+          options.compileOptions.environment = nunjucks.configure(
+            [
+              path.join(options.relativeTo || process.cwd(), options.path),
+              'node_modules/govuk-frontend/dist'
+            ],
+            {
+              autoescape: true,
+              watch: false
+            }
+          )
 
           return next()
         }
@@ -37,7 +46,7 @@ module.exports = {
       assetPath: '/assets',
       serviceName: 'Service name',
       pageTitle: 'Service name - GOV.UK',
-      analyticsAccount: analyticsAccount
+      analyticsAccount
     }
   }
 }

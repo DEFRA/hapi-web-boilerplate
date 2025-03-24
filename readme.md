@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.com/DEFRA/hapi-web-boilerplate.svg?branch=master)](https://travis-ci.com/DEFRA/hapi-web-boilerplate) [![Maintainability](https://api.codeclimate.com/v1/badges/5c3956c73c9b1496dadd/maintainability)](https://codeclimate.com/github/DEFRA/hapi-web-boilerplate/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/5c3956c73c9b1496dadd/test_coverage)](https://codeclimate.com/github/DEFRA/hapi-web-boilerplate/test_coverage) [![Greenkeeper badge](https://badges.greenkeeper.io/DEFRA/hapi-web-boilerplate.svg)](https://greenkeeper.io/)
-
 # (Enter service name)
 (Description of the service)
 
@@ -21,7 +19,7 @@ Once you clone this repository you'll need to make a few changes before you're r
 
 - [ ] Add service name and description to the README above
 - [ ] Check over the content of the 404 and 500 error pages and tailor to suit
-- [ ] Update the `package.json` with the name, description and any git urls and authors etc.  
+- [ ] Update the `package.json` with the name, description and any git urls and authors etc.
 - [ ] Update the [views context data](/server/plugins/views.js#L39) to include the correct service and default page title
 - [ ] Remove the .git folder in the root directory. This will cut the cord to this boilerplate repo.
 - [ ] Update the build status badges to your new project
@@ -49,7 +47,7 @@ Click here for a similar [api boilerplate hapi project](https://github.com/DEFRA
 Based on:
 
 - [hapijs](https://github.com/hapijs/hapi) - The framework & core plugins like `joi`, `vision` etc.
-- [standardjs](http://standardjs.com/) - Linting
+- [neostandard](https://github.com/neostandard/neostandard) - Linting
 - [govuk-frontend](https://github.com/alphagov/govuk-frontend) - Styles & macros
 - [nunjucks](http://mozilla.github.io/nunjucks/) - Default template engine
 - [npm-scripts](https://docs.npmjs.com/misc/scripts) - Build tool
@@ -118,7 +116,7 @@ Any build output should write to `server/public/build`. This path is in the `.gi
 
 ## Routes
 
-Incoming requests are handled by the server via routes. 
+Incoming requests are handled by the server via routes.
 Each route describes an HTTP endpoint with a path, method, and other properties.
 
 Routes are found in the `server/routes` directory and loaded using the `server/plugins/router.js` plugin.
@@ -149,7 +147,7 @@ The default ones are found in the `bin` directory.
 
 The task runner is simply `npm` using `npm-scripts`.
 
-We chose to use this for simplicity but there's nothing to stop you adding `gulp`, `grunt` or another task runner if you prefer. 
+We chose to use this for simplicity but there's nothing to stop you adding `gulp`, `grunt` or another task runner if you prefer.
 
 The predefined tasks are:
 
@@ -170,12 +168,12 @@ For more information around using `npm-scripts` as a build tool:
 
 ## Testing
 
-[lab](https://github.com/hapijs/lab) and [code](https://github.com/hapijs/code) are used for unit testing.
+[jest](https://https://jestjs.io/) is used for unit testing.
 
-See the `/test` folder for more information.
+See the `/__test__` folder for more information.
 
 ## Linting
 
-[standard.js](http://standardjs.com/) is used to lint both the server-side and client-side javascript code.
+[neostandard](https://github.com/neostandard/neostandard) is used to lint both the server-side and client-side javascript code.
 
 It's defined as a build task and can be run using `npm run lint`.

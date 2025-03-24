@@ -1,4 +1,5 @@
-const joi = require('@hapi/joi')
+import joi from 'joi'
+
 const envs = ['dev', 'test', 'prod']
 
 // Define config schema
@@ -24,4 +25,4 @@ if (error) {
 // Add some helper props
 value.isDev = value.env === 'dev'
 
-module.exports = value
+export default value

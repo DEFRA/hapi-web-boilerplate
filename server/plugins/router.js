@@ -1,10 +1,14 @@
+import home from '../routes/home.js'
+import about from '../routes/about.js'
+import pub from '../routes/public.js'
+
 const routes = [].concat(
-  require('../routes/home'),
-  require('../routes/about'),
-  require('../routes/public')
+  home,
+  about,
+  pub
 )
 
-module.exports = {
+export default {
   plugin: {
     name: 'router',
     register: (server, options) => {
