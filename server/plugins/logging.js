@@ -1,4 +1,4 @@
-import log from '@hapi/log'
+import log from 'hapi-pino'
 import config from '../config.js'
 
 const events = ['log', 'request', 'start', 'stop']

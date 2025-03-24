@@ -3,3 +3,5 @@
   $govuk-assets-path: "/assets/",
   $govuk-new-organisation-colours: true
 );
+
+@import "pkg:@defra/forms-engine-plugin";

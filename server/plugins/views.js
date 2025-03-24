@@ -1,14 +1,8 @@
-import path from 'path'
-import * as url from 'url'
 import nunjucks from 'nunjucks'
 import vision from '@hapi/vision'
 import config from '../config.js'
-import { createRequire } from 'module'
 
-const require = createRequire(import.meta.url)
-const pkg = require('../../package.json')
-const analyticsAccount = config.analyticsAccount
-const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
+const path = ['server/views']
 
 export default {
   plugin: vision,
@@ -23,30 +17,29 @@ export default {
           }
         },
         prepare: (options, next) => {
-          options.compileOptions.environment = nunjucks.configure(
+          const env = nunjucks.configure(
             [
-              path.join(options.relativeTo || process.cwd(), options.path),
+              ...path,
               'node_modules/govuk-frontend/dist'
             ],
             {
-              autoescape: true,
-              watch: false
+              trimBlocks: true,
+              lstripBlocks: true
             }
           )
+
+          options.compileOptions.environment = env
 
           return next()
         }
       }
     },
-    path: '../views',
-    relativeTo: __dirname,
-    isCached: !config.isDev,
+    path,
     context: {
-      appVersion: pkg.version,
       assetPath: '/assets',
       serviceName: 'Service name',
-      pageTitle: 'Service name - GOV.UK',
-      analyticsAccount
-    }
+      pageTitle: 'Service name - GOV.UK'
+    },
+    isCached: !config.isDev
   }
 }
