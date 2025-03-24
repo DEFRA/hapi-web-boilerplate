@@ -1,14 +1,8 @@
 import nunjucks from 'nunjucks'
 import vision from '@hapi/vision'
 import config from '../config.js'
-import { createRequire } from 'module'
-import config from '../config.mjs'
-import { prepareNunjucksEnvironment, context, VIEW_PATH } from '@defra/forms-engine-plugin'
 
-const path = [
-  `node_modules/@defra/forms-engine-plugin/${VIEW_PATH}`,
-  'server/views'
-]
+const path = ['server/views']
 
 export default {
   plugin: vision,
@@ -34,8 +28,6 @@ export default {
             }
           )
 
-          prepareNunjucksEnvironment(env)
-
           options.compileOptions.environment = env
 
           return next()
@@ -43,7 +35,11 @@ export default {
       }
     },
     path,
-    isCached: !config.isDev,
-    context
+    context: {
+      assetPath: '/assets',
+      serviceName: 'Service name',
+      pageTitle: 'Service name - GOV.UK'
+    },
+    isCached: !config.isDev
   }
 }
