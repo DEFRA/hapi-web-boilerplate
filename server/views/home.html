@@ -1,28 +1,17 @@
 {% extends 'layout.html' %}
 
-{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+{% from "govuk/components/task-list/macro.njk" import govukTaskList %}
 
 {% block content %}
-  <div class="govuk-body">
-    {{
-      govukDateInput({
-        id: "dob",
-        namePrefix: "dob",
-        fieldset: {
-          legend: {
-            text: "What is your date of birth?",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--xl"
-          }
-        },
-        hint: {
-          text: "For example, 31 3 1980"
-        }
-      })
-    }}
-
-
-    <p>{{title}}</p>
-    <p>{{message}}</p>
+  <span class="govuk-caption-xl">{{ model.caption }}</span>
+  <h1 class="govuk-heading-xl">{{ model.title }}</h1>
+  <div class="govuk-inset-text">Application closing date is <strong>{{ model.closingDate }}</strong></div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {% for taskList in model.taskLists %}
+        <h2 class="govuk-heading-m govuk-!-margin-top-5">{{ taskList.title }}</h2>
+        {{ govukTaskList(taskList.options) }}
+      {% endfor %}
+    </div>
   </div>
 {% endblock %}

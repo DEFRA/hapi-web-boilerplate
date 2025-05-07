@@ -1,0 +1,276 @@
+{
+  "engine": "V2",
+  "name": "Eligibility",
+  "pages": [
+    {
+      "title": "What is your business?",
+      "path": "/nature-of-business",
+      "section": "drAQWe",
+      "components": [
+        {
+          "name": "natureOfBusinessRadiosField",
+          "title": "What is your business?",
+          "type": "RadiosField",
+          "list": "natureOfBusinessList",
+          "hint": "Select one option",
+          "options": {
+            "customValidationMessages": {
+              "any.required": "Select the option that applies to your business"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "You cannot apply for a grant from this scheme",
+      "path": "/cannot-apply-nature-of-business",
+      "controller": "TerminalPageController",
+      "section": "drAQWe",
+      "components": [
+        {
+          "name": "natureOfBusinessCannotApply",
+          "title": "Html",
+          "type": "Html",
+          "content": "<p class=\"govuk-body\">This grant is for businesses who:</p>\n\n<ul class=\"govuk-list govuk-list--bullet\">\n<li>are agricultural or horticultural growers or producers</li>\n<li>are a business processing agricultural or horticultural products that is at least 50% owned by agricultural or horticultural producers</li>\n</ul>\n\n<p class=\"govuk-body\">See other grants you may be eligible for.</p>\n"
+        }
+      ],
+      "condition": "natureOfBusinessCondition"
+    },
+    {
+      "title": "What is the legal status of the business?",
+      "path": "/legal-status",
+      "section": "drAQWe",
+      "components": [
+        {
+          "name": "legalStatusRadiosField",
+          "title": "What is the legal status of the business?",
+          "type": "RadiosField",
+          "list": "legalStatusList",
+          "options": {
+            "customValidationMessages": {
+              "any.required": "Select the legal status of the business"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "You cannot apply for a grant from this scheme",
+      "path": "/legal-status-cannot-apply",
+      "controller": "TerminalPageController",
+      "section": "drAQWe",
+      "components": [
+        {
+          "name": "legalStatusCannotApplyInfo",
+          "title": "Html",
+          "type": "Html",
+          "content": "<p class=\"govuk-body\">Your business does not have an eligible legal status.</p>\n"
+        },
+        {
+          "type": "Html",
+          "name": "legalStatusWarning",
+          "title": "Html",
+          "content": "<div class=\"govuk-warning-text\"> <span class=\"govuk-warning-text__icon\" aria-hidden=\"true\">!</span> <strong class=\"govuk-warning-text__text\"> <span class=\"govuk-visually-hidden\">Warning</span>Other types of business may be supported in future schemes.</strong></div>"
+        }
+      ],
+      "condition": "legalStatusCondition"
+    },
+    {
+      "title": "Is the planned project in England?",
+      "path": "/country",
+      "section": "drAQWe",
+      "components": [
+        {
+          "name": "countryYesNoField",
+          "title": "Is the planned project in England?",
+          "hint": "The site where the work will happen",
+          "type": "YesNoField",
+          "options": {
+            "customValidationMessages": {
+              "any.required": "Select yes if the project is in England"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "You cannot apply for a grant from this scheme",
+      "path": "/cannot-apply-country",
+      "controller": "TerminalPageController",
+      "section": "drAQWe",
+      "components": [
+        {
+          "name": "countryCannotApplyInfo",
+          "title": "Html",
+          "type": "Html",
+          "content": "<p class=\"govuk-body\">This grant is only for projects in England.</p>\n<div class=\"govuk-inset-text\">Scotland, Wales and Northern Ireland have other grants available.</div>"
+        }
+      ],
+      "condition": "countryCondition"
+    },
+    {
+      "title": "Summary",
+      "path": "/summary",
+      "controller": "TaskListSummaryPageController",
+      "components": [],
+      "next": []
+    }
+  ],
+  "lists": [
+    {
+      "title": "What is your business?",
+      "name": "natureOfBusinessList",
+      "type": "string",
+      "items": [
+        {
+          "text": "A grower or producer of agricultural or horticultural produce",
+          "description": "For example, arable or livestock farmer, fruit producer, salad grower",
+          "value": "natureOfBusiness-A1"
+        },
+        {
+          "text": "A business processing agricultural or horticultural products that is at least 50% owned by agricultural or horticultural producers",
+          "description": "For example, a cheese production business owned by a group of farmers",
+          "value": "natureOfBusiness-A2"
+        },
+        {
+          "text": "A woodland manager processing wild venison products",
+          "value": "natureOfBusiness-A3"
+        },
+        {
+          "text": "None of the above",
+          "value": "natureOfBusiness-A4"
+        }
+      ]
+    },
+    {
+      "title": "What is the legal status of your business?",
+      "name": "legalStatusList",
+      "type": "string",
+      "items": [
+        {
+          "text": "Sole trader",
+          "value": "legalStatus-A1"
+        },
+        {
+          "text": "Partnership",
+          "value": "legalStatus-A2"
+        },
+        {
+          "text": "Limited company",
+          "value": "legalStatus-A3"
+        },
+        {
+          "text": "Charity",
+          "value": "legalStatus-A4"
+        },
+        {
+          "text": "Trust",
+          "value": "legalStatus-A5"
+        },
+        {
+          "text": "Limited liability partnership",
+          "value": "legalStatus-A6"
+        },
+        {
+          "text": "Community interest company",
+          "value": "legalStatus-A7"
+        },
+        {
+          "text": "Limited partnership",
+          "value": "legalStatus-A8"
+        },
+        {
+          "text": "Industrial and provident society",
+          "value": "legalStatus-A9"
+        },
+        {
+          "text": "Co-operative society (Co-Op)",
+          "value": "legalStatus-A10"
+        },
+        {
+          "text": "Community benefit society (BenCom)",
+          "value": "legalStatus-A11"
+        },
+        {
+          "text": "None of the above",
+          "value": "legalStatus-A12"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": "Eligibility",
+      "name": "drAQWe",
+      "hideTitle": false
+    }
+  ],
+  "conditions": [
+    {
+      "name": "natureOfBusinessCondition",
+      "displayName": "natureOfBusinessNone",
+      "value": {
+        "name": "natureOfBusinessNone",
+        "conditions": [
+          {
+            "field": {
+              "name": "natureOfBusinessRadiosField",
+              "type": "RadiosField",
+              "display": "What is your business?"
+            },
+            "operator": "is",
+            "value": {
+              "type": "Value",
+              "value": "natureOfBusiness-A4",
+              "display": "None of the above"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "legalStatusCondition",
+      "displayName": "legalStatusNone",
+      "value": {
+        "name": "legalStatusNone",
+        "conditions": [
+          {
+            "field": {
+              "name": "legalStatusRadiosField",
+              "type": "RadiosField",
+              "display": "What is the legal status of the business?"
+            },
+            "operator": "is",
+            "value": {
+              "type": "Value",
+              "value": "legalStatus-A12",
+              "display": "None of the above"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "countryCondition",
+      "displayName": "plannedProjectNo",
+      "value": {
+        "name": "plannedProjectNo",
+        "conditions": [
+          {
+            "field": {
+              "name": "countryYesNoField",
+              "type": "YesNoField",
+              "display": "Is the planned project in England?"
+            },
+            "operator": "is",
+            "value": {
+              "type": "Value",
+              "value": "false",
+              "display": "No"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
