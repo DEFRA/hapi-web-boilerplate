@@ -1,0 +1,96 @@
+{
+  "name": "Personal details",
+  "engine": "V2",
+  "pages": [
+    {
+      "path": "/whats-your-name",
+      "title": "What's your name?",
+      "components": [
+        {
+          "type": "TextField",
+          "name": "textField",
+          "title": "Name",
+          "hint": "Enter your full name",
+          "options": {
+            "required": true
+          },
+          "schema": {}
+        }
+      ],
+      "next": [],
+      "section": "dFtgHJ"
+    },
+    {
+      "path": "/whats-your-email-address",
+      "title": "What's your email address?",
+      "components": [
+        {
+          "name": "MaTzaT",
+          "options": {
+            "required": true
+          },
+          "type": "EmailAddressField",
+          "title": "Email adress",
+          "schema": {},
+          "hint": "This is an email address. An email address must contain an at sign @"
+        }
+      ],
+      "next": [],
+      "section": "dFtgHJ"
+    },
+    {
+      "path": "/whats-your-phone-number",
+      "title": "What's your phone number?",
+      "components": [
+        {
+          "name": "BdKgCe",
+          "options": {
+            "required": true
+          },
+          "type": "TelephoneNumberField",
+          "title": "Phone number",
+          "schema": {},
+          "hint": "This is a telephone number. This field can only contain numbers and the + symbol"
+        }
+      ],
+      "next": [],
+      "section": "dFtgHJ"
+    },
+    {
+      "path": "/whats-your-address",
+      "title": "What's your address?",
+      "components": [
+        {
+          "name": "wZLWPy",
+          "options": {
+            "required": true
+          },
+          "type": "UkAddressField",
+          "title": "Address",
+          "schema": {},
+          "hint": "This is a UK address. Users must enter address line 1, town and a postcode"
+        }
+      ],
+      "next": [],
+      "section": "dFtgHJ"
+    },
+    {
+      "title": "Summary",
+      "path": "/summary",
+      "controller": "TaskListSummaryPageController",
+      "components": [],
+      "next": []
+    }
+  ],
+  "conditions": [],
+  "sections": [
+    {
+      "name": "dFtgHJ",
+      "title": "Personal details",
+      "hideTitle": false
+    }
+  ],
+  "lists": [],
+  "outputEmail": "defraforms@defra.gov.uk",
+  "startPage": "/whats-your-name"
+}
