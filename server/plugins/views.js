@@ -36,7 +36,6 @@ export default {
     },
     path,
     context: {
-      assetPath: '/assets',
       serviceName: 'Service name',
       pageTitle: 'Service name - GOV.UK'
     },
