@@ -15,13 +15,6 @@ export default [
   },
   {
     method: 'GET',
-    path: '/stylesheets/application.min.css',
-    handler: {
-      file: 'node_modules/@defra/forms-engine-plugin/.public/stylesheets/application.min.css'
-    }
-  },
-  {
-    method: 'GET',
     path: '/javascripts/application.min.js',
     handler: {
       file: 'node_modules/@defra/forms-engine-plugin/.public/javascripts/application.min.js'

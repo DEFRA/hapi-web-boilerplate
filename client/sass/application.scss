@@ -1,5 +1,6 @@
-@forward "pkg:govuk-frontend" with (
+@use "pkg:govuk-frontend" with (
   $govuk-global-styles: true,
-  $govuk-assets-path: "/assets/",
-  $govuk-new-organisation-colours: true
+  $govuk-assets-path: "/assets/"
 );
+
+// @use "pkg:@defra/forms-engine-plugin";

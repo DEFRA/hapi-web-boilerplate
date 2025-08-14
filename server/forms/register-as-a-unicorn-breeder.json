@@ -1,0 +1,393 @@
+{
+  "name": "Register as a unicorn breeder",
+  "pages": [
+    {
+      "path": "/whats-your-name",
+      "title": "What's your name?",
+      "components": [
+        {
+          "type": "TextField",
+          "name": "textField",
+          "title": "Name",
+          "hint": "This is a single line text box. We use it to ask for information that's likely to be 1 sentence",
+          "options": {
+            "required": true
+          },
+          "schema": {}
+        }
+      ],
+      "next": [
+        {
+          "path": "/whats-your-email-address"
+        }
+      ],
+      "section": "section"
+    },
+    {
+      "title": "Summary",
+      "path": "/summary",
+      "controller": "./pages/summary.js",
+      "components": [],
+      "next": []
+    },
+    {
+      "path": "/whats-your-email-address",
+      "title": "What's your email address?",
+      "components": [
+        {
+          "name": "MaTzaT",
+          "options": {
+            "required": true
+          },
+          "type": "EmailAddressField",
+          "title": "Email adress",
+          "schema": {},
+          "hint": "This is an email address. An email address must contain an at sign @"
+        }
+      ],
+      "next": [
+        {
+          "path": "/whats-your-phone-number"
+        }
+      ],
+      "section": "section"
+    },
+    {
+      "path": "/whats-your-phone-number",
+      "title": "What's your phone number?",
+      "components": [
+        {
+          "name": "BdKgCe",
+          "options": {
+            "required": true
+          },
+          "type": "TelephoneNumberField",
+          "title": "Phone number",
+          "schema": {},
+          "hint": "This is a telephone number. This field can only contain numbers and the + symbol"
+        }
+      ],
+      "next": [
+        {
+          "path": "/whats-your-address"
+        }
+      ],
+      "section": "section"
+    },
+    {
+      "path": "/whats-your-address",
+      "title": "What's your address?",
+      "components": [
+        {
+          "name": "wZLWPy",
+          "options": {
+            "required": true
+          },
+          "type": "UkAddressField",
+          "title": "Address",
+          "schema": {},
+          "hint": "This is a UK address. Users must enter address line 1, town and a postcode"
+        }
+      ],
+      "next": [
+        {
+          "path": "/do-you-want-your-unicorn-breeder-certificate-sent-to-this-address"
+        }
+      ],
+      "section": "section"
+    },
+    {
+      "path": "/do-you-want-your-unicorn-breeder-certificate-sent-to-this-address",
+      "title": "Do you want your unicorn breeder certificate sent to this address?",
+      "components": [
+        {
+          "name": "dBfuID",
+          "options": {},
+          "type": "YesNoField",
+          "title": "Send certificate to same address",
+          "schema": {},
+          "hint": "This is a yes or no question. We can branch to different questions based on the answer",
+          "values": {
+            "type": "listRef"
+          }
+        }
+      ],
+      "next": [
+        {
+          "path": "/what-address-do-you-want-the-certificate-sent-to",
+          "condition": "oyGPwP"
+        },
+        {
+          "path": "/when-does-your-unicorn-insurance-policy-start",
+          "condition": ""
+        }
+      ],
+      "section": "section"
+    },
+    {
+      "path": "/what-address-do-you-want-the-certificate-sent-to",
+      "title": "What address do you want the certificate sent to?",
+      "components": [
+        {
+          "name": "AegFro",
+          "options": {},
+          "type": "UkAddressField",
+          "title": "Address to send certificate",
+          "schema": {},
+          "hint": "This is a simple branch to an extra question - it's shown to users who select 'no' when asked if this is the address where the certificate should be sent"
+        }
+      ],
+      "next": [
+        {
+          "path": "/when-does-your-unicorn-insurance-policy-start"
+        }
+      ],
+      "section": "section"
+    },
+    {
+      "title": "When does your unicorn insurance policy start?",
+      "path": "/when-does-your-unicorn-insurance-policy-start",
+      "section": "Regnsa",
+      "next": [
+        {
+          "path": "/upload-your-insurance-certificate"
+        }
+      ],
+      "components": [
+        {
+          "name": "mjAccr",
+          "options": {},
+          "type": "DatePartsField",
+          "title": "Unicorn insurance policy start date",
+          "schema": {},
+          "hint": "This is a date. We can add custom validation to the field based on your requirements. For example, the date entered must be before or after a certain date"
+        }
+      ]
+    },
+    {
+      "title": "How many unicorns do you expect to breed each year?",
+      "path": "/how-many-unicorns-do-you-expect-to-breed-each-year",
+      "section": "susaYr",
+      "next": [
+        {
+          "path": "/what-type-of-unicorns-will-you-breed"
+        }
+      ],
+      "components": [
+        {
+          "name": "aitzzV",
+          "options": {},
+          "type": "RadiosField",
+          "list": "IeFOkf",
+          "title": "Number of unicorns",
+          "schema": {},
+          "hint": "This is a radio button. Users can only select one option from the list",
+          "values": {
+            "type": "listRef"
+          }
+        }
+      ]
+    },
+    {
+      "title": "What type of unicorns will you breed?",
+      "path": "/what-type-of-unicorns-will-you-breed",
+      "section": "susaYr",
+      "next": [
+        {
+          "path": "/where-will-you-keep-the-unicorns"
+        }
+      ],
+      "components": [
+        {
+          "name": "DyfjJC",
+          "options": {},
+          "type": "CheckboxesField",
+          "list": "fXiZrL",
+          "title": "Type of unicorn",
+          "schema": {},
+          "hint": "This is a check box. Users can select more than one option",
+          "values": {
+            "type": "listRef"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Where will you keep the unicorns?",
+      "path": "/where-will-you-keep-the-unicorns",
+      "section": "susaYr",
+      "next": [
+        {
+          "path": "/how-many-members-of-staff-will-look-after-the-unicorns"
+        }
+      ],
+      "components": [
+        {
+          "name": "bClCvo",
+          "options": {},
+          "schema": {},
+          "type": "MultilineTextField",
+          "title": "Where you keep the unicorn",
+          "hint": "This is a multi-line text box. We use it when you expect the response to be more than 1 sentence long"
+        }
+      ]
+    },
+    {
+      "title": "How many members of staff will look after the unicorns?",
+      "path": "/how-many-members-of-staff-will-look-after-the-unicorns",
+      "section": "susaYr",
+      "next": [
+        {
+          "path": "/summary"
+        }
+      ],
+      "components": [
+        {
+          "name": "zhJMaM",
+          "options": {
+            "classes": "govuk-!-width-one-quarter"
+          },
+          "type": "NumberField",
+          "title": "Number of staff",
+          "schema": {},
+          "hint": "This is a number field. The answer must be a number. We can use custom validation to set decimal places, minimum and maximum values"
+        }
+      ]
+    },
+    {
+      "title": "Upload your insurance certificate",
+      "path": "/upload-your-insurance-certificate",
+      "controller": "FileUploadPageController",
+      "section": "Regnsa",
+      "next": [
+        {
+          "path": "/how-many-unicorns-do-you-expect-to-breed-each-year"
+        }
+      ],
+      "components": [
+        {
+          "name": "dLzALM",
+          "title": "Documents",
+          "type": "FileUploadField",
+          "hint": "We can specify the format and number of uploaded files",
+          "options": {
+            "required": false
+          },
+          "schema": {
+            "min": 1,
+            "max": 3
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "displayName": "Address is different",
+      "name": "IrVmYz",
+      "value": {
+        "name": "Address is different",
+        "conditions": [
+          {
+            "field": {
+              "name": "dBfuID",
+              "type": "YesNoField",
+              "display": "Contact details: Send certificate to same address"
+            },
+            "operator": "is",
+            "value": {
+              "type": "Value",
+              "value": "false",
+              "display": "false"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "displayName": "Address is not the same",
+      "name": "oyGPwP",
+      "value": {
+        "name": "Address is not the same",
+        "conditions": [
+          {
+            "field": {
+              "name": "dBfuID",
+              "type": "YesNoField",
+              "display": "Contact details: Send certificate to same address"
+            },
+            "operator": "is",
+            "value": {
+              "type": "Value",
+              "value": "false",
+              "display": "No"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "sections": [
+    {
+      "name": "section",
+      "title": "Contact details",
+      "hideTitle": false
+    },
+    {
+      "title": "Unicorn details",
+      "name": "susaYr",
+      "hideTitle": false
+    },
+    {
+      "title": "Insurance details",
+      "name": "Regnsa",
+      "hideTitle": false
+    }
+  ],
+  "lists": [
+    {
+      "title": "number of unicorns",
+      "name": "IeFOkf",
+      "type": "string",
+      "items": [
+        {
+          "text": "1 to 5",
+          "value": "1 to 5"
+        },
+        {
+          "text": "6 to 10",
+          "value": "6 to 10"
+        },
+        {
+          "text": "11 or more",
+          "value": "11 or more"
+        }
+      ]
+    },
+    {
+      "title": "Type of unicorn",
+      "name": "fXiZrL",
+      "type": "string",
+      "items": [
+        {
+          "text": "Flying",
+          "value": "Flying"
+        },
+        {
+          "text": "Fire breathing",
+          "value": "Fire breathing"
+        },
+        {
+          "text": "Aquatic",
+          "value": "Aquatic"
+        },
+        {
+          "text": "Rainbow",
+          "value": "Rainbow"
+        }
+      ]
+    }
+  ],
+  "outputEmail": "defraforms@defra.gov.uk",
+  "startPage": "/whats-your-name"
+}
